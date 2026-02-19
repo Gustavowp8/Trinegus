@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Manutenção de Computadores - Trinegus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .servicos-lista { text-align: left; margin: 20px 0; }
+        .item-servico {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .item-servico:hover { background-color: #f0f7ff; }
+        .item-servico input { margin-right: 15px; width: auto; }
+        .item-servico label { cursor: pointer; flex-grow: 1; font-size: 0.9rem; margin-bottom: 0; }
+        .total-container {
+            background: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-form">
+        <h2>Manutenção de Computadores</h2>
+        <p>Selecione os serviços desejados:</p>
+
+        <form id="formPC">
+            <div class="servicos-lista">
+                <div class="item-servico">
+                    <input type="checkbox" class="servico-check" data-preco="100" value="Formatação (Win/Linux)" id="s1">
+                    <label for="s1">Formatação Windows/Linux - <b>R$ 100</b></label>
+                </div>
+                <div class="item-servico">
+                    <input type="checkbox" class="servico-check" data-preco="140" value="Limpeza + Pasta Térmica" id="s2">
+                    <label for="s2">Limpeza e Pasta Térmica - <b>R$ 140</b></label>
+                </div>
+                <div class="item-servico">
+                    <input type="checkbox" class="servico-check" data-preco="250" value="Manutenção Completa" id="s3">
+                    <label for="s3">Manutenção Completa (Tudo) - <b>R$ 250</b></label>
+                </div>
+                <div class="item-servico">
+                    <input type="checkbox" class="servico-check" data-preco="350" value="Programas Corporativos" id="s4">
+                    <label for="s4">Programas (Office/Antivírus/ERP) - <b>R$ 350</b></label>
+                </div>
+                <div class="item-servico">
+                    <input type="checkbox" class="servico-check" data-preco="470" value="Rede e Impressoras" id="s5">
+                    <label for="s5">Compartilhamento Rede/Imp. - <b>R$ 470</b></label>
+                </div>
+                <div class="item-servico">
+                    <input type="checkbox" class="servico-check" data-preco="150" value="Troca Periféricos (SSD/RAM)" id="s6">
+                    <label for="s6">Upgrade (SSD/Memória) - <b>R$ 150</b></label>
+                </div>
+            </div>
+
+            <div class="total-container">
+                Total: R$ <span id="valorTotal">0</span>,00
+            </div>
+
+            <hr>
+            
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+            <input type="tel" id="telefone" placeholder="WhatsApp" required>
+            <input type="text" id="endereco" placeholder="Endereço/Bairro" required>
+
+            <button type="submit" id="btnEnviar">Solicitar Manutenção</button>
+        </form>
+        <div id="status"></div>
+    </div>
+
+    <script src="Views/js/script.js"></script>
+</body>
+</html>

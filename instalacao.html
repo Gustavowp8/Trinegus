@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Solicitar Instalação - Trinegus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-form">
+        <h2>Solicitar orçamento de Instalação</h2>
+        <p>Preencha os dados abaixo para instalação no <b>DF</b></p>
+
+        <form id="formInstalacao">
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+            <input type="text" id="email" placeholder="Seu E-mail" required>
+            <input type="tel" id="telefone" placeholder="Telefone (WhatsApp)" required>
+            
+            <div class="row">
+                <input type="text" id="cep" placeholder="CEP" required>
+                <input type="text" id="cidade" placeholder="Cidade" readonly required>
+                <select id="uf" required>
+                    <option value="">UF</option>
+                    <option value="DF">DF</option>
+                    <option value="GO">GO</option>
+                </select>
+            </div>
+
+            <input type="text" id="endereco" placeholder="Endereço Completo (Rua, Número, Bloco)" required>
+            
+            <div class="row">
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label for="potencia">Potência aproximada</label>
+                    <select id="potencia" required>
+                        <option value="Não sei">Não sei informar</option>
+                        <option value="9.000 BTUs">9.000 BTUs</option>
+                        <option value="12.000 BTUs">12.000 BTUs</option>
+                        <option value="18.000 BTUs">18.000 BTUs</option>
+                        <option value="24.000 BTUs+">24.000 BTUs ou mais</option>
+                    </select>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label for="quantidade">Qtd</label>
+                    <input type="number" id="quantidade" min="1" value="1" required>
+                </div>
+            </div>
+
+            <button type="submit" id="btnEnviar">Enviar Solicitação de Instalação</button>
+        </form>
+        <div id="status"></div>
+    </div>
+
+    <script src="Views/js/script.js"></script>
+</body>
+</html>

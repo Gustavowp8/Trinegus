@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Troca de Chuveiro - Trinegus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-form">
+        <h2>Troca de Chuveiro</h2>
+        
+        <div style="background-color: #e7f3ff; border-left: 5px solid #0056b3; padding: 10px; margin-bottom: 20px; text-align: left; font-size: 0.9rem;">
+            <strong>Valor do serviço: R$ 170,00</strong><br>
+            <small>*Valores adicionais podem ser aplicados caso seja necessária a troca de fiação ou disjuntor.</small>
+        </div>
+
+        <form id="formChuveiro">
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+            <input type="tel" id="telefone" placeholder="Telefone (WhatsApp)" required>
+            
+            <div class="row">
+                <input type="text" id="cep" placeholder="CEP" required>
+                <input type="text" id="cidade" placeholder="Cidade" readonly required>
+                <select id="uf" required>
+                    <option value="DF">DF</option>
+                    <option value="GO">GO</option>
+                </select>
+            </div>
+
+            <input type="text" id="endereco" placeholder="Endereço Completo" required>
+            
+            <label for="dataVisita">Data desejada para a visita:</label>
+            <input type="date" id="dataVisita" required>
+
+            <button type="submit" id="btnEnviar">Solicitar Agendamento</button>
+        </form>
+        <div id="status"></div>
+    </div>
+
+    <script src="Views/js/script.js"></script>
+</body>
+</html>

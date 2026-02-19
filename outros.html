@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Outros Serviços - Trinegus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-form">
+        <h2>Solicitar Outro Serviço</h2>
+        <p>Descreva o que você precisa e nossa equipe entrará em contato.</p>
+
+        <form id="formOutros">
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+            
+            <div class="row">
+                <input type="text" id="email" placeholder="Seu E-mail" required>
+                <input type="tel" id="telefone" placeholder="WhatsApp" required>
+            </div>
+            
+            <div class="row">
+                <input type="text" id="cep" placeholder="CEP" required>
+                <input type="text" id="cidade" placeholder="Cidade" readonly required>
+                <select id="uf" required>
+                    <option value="">UF</option>
+                    <option value="DF">DF</option>
+                    <option value="GO">GO</option>
+                </select>
+            </div>
+
+            <input type="text" id="endereco" placeholder="Endereço Completo (Rua, Número, Bloco)" required>
+            
+            <label for="descricao">O que você precisa?</label>
+            <textarea id="descricao" placeholder="Ex: Preciso de reparo em uma fiação de jardim ou instalação de suporte de TV..." rows="4" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 10px; font-family: 'Poppins', sans-serif; outline: none; resize: vertical;" required></textarea>
+
+            <button type="submit" id="btnEnviar">Enviar Solicitação</button>
+        </form>
+        <div id="status"></div>
+    </div>
+
+    <script src="Views/js/script.js"></script>
+</body>
+</html>
