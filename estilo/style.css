@@ -114,6 +114,79 @@ input:focus {
     font-size: 0.9rem;
 }
 
+/* Ultimo codigo */
+
+/* --- Ajustes Globais --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6; /* Um cinza bem leve para destacar o card branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Ajuste no Título (Diminui em telas menores) --- */
+h2 {
+    color: #333;
+    font-size: 1.8rem; /* Reduzido de 2.5rem para caber melhor */
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* --- Container do Formulário --- */
+.container-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 90%; /* Garante margem nas laterais em celulares */
+    max-width: 450px;
+    margin: 20px auto;
+    box-sizing: border-box; /* Importante para o padding não somar na largura */
+}
+
+/* --- Grid que causava o erro --- */
+.row {
+    display: grid;
+    grid-template-columns: 1fr; /* Por padrão, um embaixo do outro (celular) */
+    gap: 15px;
+}
+
+/* --- Ajuste para o campo de Descrição --- */
+textarea {
+    box-sizing: border-box; /* Garante que o padding não faça ele sair do card */
+}
+
+/* --- MEDIA QUERIES (A mágica da responsividade) --- */
+
+/* Para telas maiores que 480px (Tablets e Desktops) */
+@media (min-width: 480px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    /* No desktop, o CEP/Cidade/UF voltam a ficar na mesma linha */
+    .row {
+        grid-template-columns: 2fr 1fr; 
+    }
+}
+
+/* Ajuste específico para a linha de CEP/Cidade/UF se houver 3 itens */
+.row-triple {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 480px) {
+    .row-triple {
+        grid-template-columns: 1fr 2fr 1fr; /* CEP, Cidade, UF */
+    }
+}
 .esp{
     
     padding: 50px;
