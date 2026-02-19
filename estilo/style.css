@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+.logo img {
+    width: 280px; /* Ajustado para parecer mais com a proporção da imagem */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.menu-servicos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+.btn {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border: 3px solid #0056b3; /* Azul escuro da borda */
+    border-radius: 15px; /* Bordas arredondadas */
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Efeito ao passar o mouse */
+.btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* ... manter o CSS anterior ... */
+
+.container-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+form label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: -10px;
+}
+
+input, select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0056b3;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+#btnEnviar {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnEnviar:hover {
+    background-color: #003d7a;
+}
+
+#status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
